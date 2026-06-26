@@ -62,8 +62,7 @@ export const EXPERIENCES: Experience[] = [
       "Preparing for CompTIA Security+, CompTIA A+, and CompTIA CySA+ certifications."
     ],
     skills: ["German A2", "AI Agents", "Cybersecurity", "CompTIA Exam Prep"],
-    referenceFile: "/references/New Horizons Melky-Salem Fernandes Batista da Silva Security&IT.pdf"
-  },
+   },
   {
     company: "Planerio",
     role: "Software Developer (Full Stack)",
