@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
+
+  /* Color Palette */
+  --color-clean-bg: #eef2f6;
+  --color-slate-dark: #1e293b;
+  --color-slate-medium: #334155;
+  --color-cerulean: #0ea5e9;
+  --color-past-blue: #cbd5e1;
+
+  /* Custom Shadow Configurations for Neumorphism */
+  --shadow-neumorphic-out: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+  --shadow-neumorphic-in: inset 6px 6px 12px #d1d9e6, inset -6px -6px 12px #ffffff;
+  --shadow-neumorphic-sm-out: 4px 4px 8px #d1d9e6, -4px -4px 8px #ffffff;
+  --shadow-neumorphic-sm-in: inset 3px 3px 6px #d1d9e6, inset -3px -3px 6px #ffffff;
+  
+  --shadow-neumorphic-blue-out: 8px 8px 16px rgba(14, 165, 233, 0.15), -8px -8px 16px #ffffff;
+  --shadow-neumorphic-blue-in: inset 6px 6px 12px rgba(14, 165, 233, 0.15), inset -6px -6px 12px #ffffff;
+}
+
+/* Global resets and scroll behaviors */
+html {
+  scroll-behavior: smooth;
+  background-color: #eef2f6;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-slate-dark);
+  background-color: #eef2f6;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Smooth scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #eef2f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glassmorphism general classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-panel-dark {
+  background: rgba(30, 41, 59, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Neumorphic utilities for active pressed states and transitions */
+.neu-button {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+}
+
+.neu-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 10px 10px 20px #c2cbdc, -10px -10px 20px #ffffff;
+}
+
+.neu-button:active {
+  transform: translateY(1px);
+  box-shadow: inset 5px 5px 10px #d1d9e6, inset -5px -5px 10px #ffffff;
+}
+
+.neu-button-inset {
+  box-shadow: inset 6px 6px 12px #d1d9e6, inset -6px -6px 12px #ffffff;
+}
+
+/* Specific layout adjustments for default Vite structure */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border-inline: none;
+}
